@@ -7,7 +7,7 @@ import type {
 } from '@/types'
 
 export const SITE = {
-  name: 'The Design Story',
+  name: 'DW Interio',
   tagline: 'Every Space Has A Story.',
   philosophy:
     'We compose calm interiors where light, texture, and proportion speak softly — curated like a living moodboard, built like architecture.',
@@ -24,15 +24,15 @@ export const NAV_LINKS = [
 
 /** Pune studio — map centres on Koregaon Park (by appointment). */
 export const STUDIO_LOCATION = {
-  name: 'The Design Story — Studio',
-  line1: 'Zala Complex',
-  area: 'Vastunagar, Bibwewadi',
+  name: 'DW Interio — Studio',
+  line1: 'Vijayanagar Colony',
+  area: 'Municipal Colony, Pune',
   city: 'Pune',
   state: 'Maharashtra',
-  pin: '411001',
-  phoneDisplay: '+91 98601 81918',
+  pin: '411030',
+  phoneDisplay: '+91 97667 02201',
   phoneHref: 'tel:+912026100000',
-  email: 'hello@thedesignstory.in',
+  email: 'hello@dwstudio.in',
   /** Google Maps embed (no API key) — Koregaon Park, Pune */
   mapEmbedSrc:
     'https://www.google.com/maps?q=Koregaon+Park,+Pune,+Maharashtra+411001&hl=en&z=14&output=embed',
