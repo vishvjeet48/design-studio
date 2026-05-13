@@ -81,7 +81,7 @@ export function LocationSection() {
             <div className="overflow-hidden rounded-2xl border border-charcoal/10 bg-sand/30 shadow-soft dark:border-white/10 dark:bg-charcoal/40">
               <div className="aspect-[4/3] w-full min-h-[280px] lg:aspect-auto lg:min-h-[420px]">
                 <iframe
-                  title="Map — DW Interio, Koregaon Park, Pune"
+                  title="Map — The Design Story, Koregaon Park, Pune"
                   src={mapEmbedSrc}
                   className="size-full border-0 grayscale-[20%] contrast-[1.02] dark:grayscale-[35%]"
                   loading="lazy"
