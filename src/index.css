@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-serif: "Cormorant Garamond", ui-serif, Georgia, serif;
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+
+  --color-canvas: #f6f1e8;
+  --color-canvas-dark: #0f0f0f;
+  --color-ivory: #faf7f2;
+  --color-sand: #e8dfd2;
+  --color-warm-stone: #d4c4b0;
+  --color-muted-brown: #6b5b4f;
+  --color-charcoal: #2a2622;
+  --color-olive: #7a7a62;
+  --color-olive-soft: rgba(122, 122, 98, 0.35);
+
+  --shadow-soft: 0 24px 60px rgba(42, 38, 34, 0.08);
+  --shadow-card: 0 12px 40px rgba(42, 38, 34, 0.06);
+
+  --radius-lg: 1rem;
+  --radius-xl: 1.25rem;
+  --radius-2xl: 1.75rem;
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  body {
+    @apply bg-canvas text-charcoal font-sans antialiased selection:bg-olive/20 selection:text-charcoal;
+  }
+
+  .dark body {
+    @apply bg-canvas-dark text-ivory selection:bg-olive/30;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-warm-stone/70 dark:bg-muted-brown/50;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .grain {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.045'/%3E%3C/svg%3E");
+  }
+
+  .mask-fade-x {
+    mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  }
+}
